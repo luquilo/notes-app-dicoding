@@ -6,3 +6,21 @@
  tags: ['NodeJS', 'JavaScript'],
  body: 'JavaScript pertama kali dikembangkan oleh Brendan Eich dari Netscape di bawah nama Mocha, yang nantinya namanya diganti menjadi LiveScript, dan akhirnya menjadi JavaScript. Navigator sebelumnya telah mendukung Java untuk lebih bisa dimanfaatkan para pemrogram yang non-Java.',
 },
+
+Untuk properti id, createdAt, dan updatedAt harus diolah di sisi server, jadi client tidak akan mengirimkan itu. Server harus memastikan properti id selalu unik.
+
+kriteria crud
+
+1) create
+Agar web server dapat menyimpan catatan melalui aplikasi client, web server harus menyediakan route dengan path ‘/notes’ dan method POST. 
+
+2) get
+Ketika client melakukan permintaan pada path ‘/notes’ dengan method ‘GET’, maka server harus mengembalikan status code 200 (ok) serta seluruh data notes dalam bentuk array menggunakan JSON.
+
+Selain itu, client juga bisa melakukan permintaan untuk mendapatkan catatan secara spesifik menggunakan id melalui path ‘/notes/{id}’
+
+3) put
+Ketika client meminta perubahan catatan, ia akan membuat permintaan ke path ‘/notes/{id}’, menggunakan method ‘PUT’, serta membawa data JSON pada body request yang merupakan data catatan terbaru.
+
+4) delete
+ Untuk menghapus catatan, client akan membuat permintaan pada path ‘/notes/{id}’ dengan method ‘DELETE’. Ketika permintaan tersebut berhasil, maka server harus mengembalikan status code 200 (ok) 
