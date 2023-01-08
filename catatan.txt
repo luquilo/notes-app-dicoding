@@ -24,3 +24,14 @@ Ketika client meminta perubahan catatan, ia akan membuat permintaan ke path ‘/
 
 4) delete
  Untuk menghapus catatan, client akan membuat permintaan pada path ‘/notes/{id}’ dengan method ‘DELETE’. Ketika permintaan tersebut berhasil, maka server harus mengembalikan status code 200 (ok) 
+
+
+// struktur code
+
+server.js : Memuat kode untuk membuat, mengonfigurasi, dan menjalankan server HTTP menggunakan Hapi.
+routes.js : Memuat kode konfigurasi routing server seperti menentukan path, method, dan handler yang digunakan.
+handler.js : Memuat seluruh fungsi-fungsi handler yang digunakan pada berkas routes.
+notes.js : Memuat data notes yang disimpan dalam bentuk array objek.
+
+
+menggunakan nanoid versi 3.x.x agar bisa support export module commonJS (export versi lama / bukan es6)
